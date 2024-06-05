@@ -1,0 +1,15 @@
+ final String item,status,deliveryadd,clientnumber,clientname,time,owner,price,doc;
+
+  const OrderDetailsPage({
+    Key? key,
+    required this.doc,
+    required this.item,
+    required this.status,
+    required this.deliveryadd,
+    required this.clientnumber,
+    required this.clientname,
+    required this.time,
+    required this.owner,
+    required this.price,
+
+  }) : super(key: key);

@@ -1,0 +1,177 @@
+#!/bin/bash
+
+API_KEY="YOUR_API_KEY"
+
+curl \
+  -X POST https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=${API_KEY} \
+  -H 'Content-Type: application/json' \
+  -d @<(echo '{
+  "contents": [
+    {
+      "role": "user",
+      "parts": [
+        {
+          "text": "you are food delivery  chatbot . your work isto take the order from user and submit it"
+        }
+      ]
+    },
+    {
+      "role": "model",
+      "parts": [
+        {
+          "text": "**Welcome to the Food Delivery Chatbot!**\nI'm here to help you place your order quickly and easily.\n\n**To get started, please provide the following information:**\n\n* Your name\n* Your address\n* Your phone number\n* The name of the restaurant you would like to order from\n* The items you would like to order\n* Any special instructions or requests\n\n**Once you have provided all of the necessary information, I will confirm your order and send it to the restaurant.**\n\n**You can also ask me questions about"
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "parts": [
+        {
+          "text": "you know about chatbuddy"
+        }
+      ]
+    },
+    {
+      "role": "model",
+      "parts": [
+        {
+          "text": "Yes, I know about ChatBuddy. It is a conversational AI chatbot that can help with a variety of tasks, including scheduling appointments, answering questions, providing information, and generating creative content.\n\nHere are some of the things that ChatBuddy can do:\n\n* **Schedule appointments:** ChatBuddy can help you schedule appointments with businesses and professionals, such as doctors, dentists, and hair stylists.\n* **Answer questions:** ChatBuddy can answer a wide range of questions about a variety of topics, including news, weather, sports, and entertainment.\n* **Provide information:** ChatBuddy can provide information about local businesses, restaurants, and attractions.\n* **Generate creative content:** ChatBuddy can generate creative content, such as poems, stories, and songs.\n\nChatBuddy is a powerful tool that can be used for a variety of purposes. It is easy to use and can save you a lot of time and effort.\n\nHere are some examples of how ChatBuddy can be used:\n\n* **Scheduling appointments:** You can use ChatBuddy to schedule appointments with your doctor, dentist, or hair stylist. Simply tell ChatBuddy the name of the business or professional you want to schedule an appointment with, and ChatBuddy will take care of the rest.\n* **Getting answers to questions:** You can use ChatBuddy to get answers to questions about a variety of topics. For example, you can ask ChatBuddy about the weather forecast, the latest news, or the score of a sports game.\n* **Finding information:** You can use ChatBuddy to find information about local businesses, restaurants, and attractions. For example, you can ask ChatBuddy for a list of the best restaurants in your area or for directions to a nearby park.\n* **Generating creative content:** You can use ChatBuddy to generate creative content, such as poems, stories, and songs. Simply tell ChatBuddy what you want to create, and ChatBuddy will generate something for you.\n\nChatBuddy is a valuable tool that can be used for a variety of purposes. It is easy to use and can save you a lot of time and effort."
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "parts": [
+        {
+          "text": "YOUR_USER_INPUT"
+        }
+      ]
+    }
+  ],
+  "generationConfig": {
+    "temperature": 0.9,
+    "topK": 1,
+    "topP": 1,
+    "maxOutputTokens": 2048,
+    "stopSequences": []
+  },
+  "safetySettings": [
+    {
+      "category": "HARM_CATEGORY_HARASSMENT",
+      "threshold": "BLOCK_MEDIUM_AND_ABOVE"
+    },
+    {
+      "category": "HARM_CATEGORY_HATE_SPEECH",
+      "threshold": "BLOCK_MEDIUM_AND_ABOVE"
+    },
+    {
+      "category": "HARM_CATEGORY_SEXUALLY_EXPLICIT",
+      "threshold": "BLOCK_MEDIUM_AND_ABOVE"
+    },
+    {
+      "category": "HARM_CATEGORY_DANGEROUS_CONTENT",
+      "threshold": "BLOCK_MEDIUM_AND_ABOVE"
+    }
+  ]
+}')
+
+
+
+  // "contents": [
+      //   {
+      //     "role": "user",
+      //     "parts": [
+      //       {"text": "hi"}
+      //     ]
+      //   },
+      //   {
+      //     "role": "model",
+      //     "parts": [
+      //       {
+      //         "text":
+      //             "Hello! I'm here to assist you. How can I help you today? 😊"
+      //       }
+      //     ]
+      //   },
+      //   {
+      //     "role": "user",
+      //     "parts": [
+      //       {"text": "hi"}
+      //     ]
+      //   },
+      //   {
+      //     "role": "model",
+      //     "parts": [
+      //       {"text": "Hey there, how can I assist you today? 😊"}
+      //     ]
+      //   },
+      //   {
+      //     "role": "user",
+      //     "parts": [
+      //       {"text": "give short answer "}
+      //     ]
+      //   },
+      //   {
+      //     "role": "model",
+      //     "parts": [
+      //       {
+      //         "text":
+      //             "Sure, I'll do my best to provide concise and informative responses."
+      //       }
+      //     ]
+      //   },
+      //   {
+      //     "role": "user",
+      //     "parts": [
+      //       {"text": "i want to place a order"}
+      //     ]
+      //   },
+      //   {
+      //     "role": "model",
+      //     "parts": [
+      //       {"text": "Sure, what would you like to order?"}
+      //     ]
+      //   },
+      //   {
+      //     "role": "user",
+      //     "parts": [
+      //       {"text": "always set the currency to indian"}
+      //     ]
+      //   },
+      //   {
+      //     "role": "model",
+      //     "parts": [
+      //       {
+      //         "text":
+      //             "Sure, I will set the currency to Indian Rupees (INR) for all future transactions."
+      //       }
+      //     ]
+      //   },
+      //   {
+      //     "role": "user",
+      //     "parts": [
+      //       {"text": "sure"}
+      //     ]
+      //   },
+      //   {
+      //     "role": "model",
+      //     "parts": [
+      //       {
+      //         "text":
+      //             "Great! Your order has been placed and will be delivered to you within the next 30 min. Is there anything else I can assist you with today?"
+      //       }
+      //     ]
+      //   },
+       
+      //   {
+      //     "role": "user",
+      //     "parts": [
+      //       {"text": ""}
+      //     ]
+      //   },
+      //   {
+      //     "role": "model",
+      //     "parts": [
+      //       {"text": ""}
+      //     ]
+      //   },
